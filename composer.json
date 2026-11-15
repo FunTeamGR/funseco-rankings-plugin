@@ -1,0 +1,41 @@
+{
+    "$schema": "https://getcomposer.org/schema.json",
+    "name": "funseco/rankings-plugin",
+    "description": "Funseco server rankings — every finish stored, XAseco average rank, /rank /top10 /top100 /nextrank",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^8.2",
+        "funseco/core": "@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Funseco\\Rankings\\": "src/"
+        }
+    },
+    "require-dev": {
+        "funseco/records-plugin": "@dev",
+        "mockery/mockery": "^1.6",
+        "orchestra/testbench": "^10.0",
+        "phpunit/phpunit": "^11.5.3"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Funseco\\Rankings\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "funseco": {
+            "id": "rankings",
+            "name": "Rankings",
+            "description": "server rankings — every finish stored, XAseco average rank, /rank /top10 /top100 /nextrank",
+            "provider": "Funseco\\Rankings\\RankingsServiceProvider"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    }
+}
